@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أمين ومريم - رسالة حب أبدية مع خلفية قلوب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* خلفية رومانسية مع قلوب: صورة من Unsplash تحتوي على قلوب وألوان حب */
+            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; /* تغطية كاملة للشاشة */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* ثابتة عند التمرير */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            direction: rtl;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* طبقة شفافة وردية فوق الخلفية لتحسين القراءة */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 192, 203, 0.4); /* وردي ناعم */
+            z-index: -1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.95); /* أكثر شفافية لترى الخلفية */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(255, 107, 157, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            color: #ff6b9d;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .names {
+            font-size: 2em;
+            color: #ff6b9d;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff6b9d;
+            text-align: center;
+            animation: pulse 2s infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .message {
+            background: rgba(255, 182, 193, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #444;
+            border-left: 5px solid #ff6b9d;
+            text-align: center;
+            position: relative;
+        }
+        .message h2 {
+            color: #ff6b9d;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .message p {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .darja {
+            font-family: 'Courier New', monospace;
+            color: #ff6b9d;
+            font-weight: bold;
+            font-size: 1.3em;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .photos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        .photo {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        .photo img {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .photo img:hover {
+            transform: scale(1.05);
+        }
+        .photo h3 {
+            color: #ff6b9d;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .photo::after {
+            content: '💕';
+            display: block;
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+        .together-photo {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .together-photo img {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .together-photo img:hover {
+            transform: scale(1.02);
+        }
+        .together-photo h3 {
+            color: #ff6b9d;
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+        .together-photo::after {
+            content: '💖';
+            display: block;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+        /* قلوب صغيرة تطفو في الخلفية (3 قلوب متحركة) */
+        .floating-heart1 {
+            position: fixed;
+            top: 20%;
+            left: 10%;
+            font-size: 2em;
+            color: #ff6b9d;
+            animation: float 4s infinite ease-in-out;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        .floating-heart2 {
+            position: fixed;
+            top: 60%;
+            right: 15%;
+            font-size: 1.5em;
+            color: #ff1493;
+            animation: float 5s infinite ease-in-out reverse;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .floating-heart3 {
+            position: fixed;
+            bottom: 20%;
+            left: 20%;
+            font-size: 2.5em;
+            color: #ff69b4;
+            animation: float 6s infinite ease-in-out;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- قلوب تطفو في الخلفية -->
+    <div class="floating-heart1">💖</div>
+    <div class="floating-heart2">💕</div>
+    <div class="floating-heart3">💗</div>
+
+    <div class="container">
+        <div class="heart">💖</div>
+        <h1>مرحباً بكم في موقع الحب الرائع 💕</h1>
+        <div class="names">أمين ومريم 💗</div>
+        <p style="text-align: center; font-size: 1.2em; color: #666;">شعروا بالدفء والإيجابية في هذا المكان الهادئ. استرخوا واستمتعوا بالأجواء الجميلة معاً! 💖</p>
+        
+        <!-- قسم الرسالة الحب -->
+        <div class="message">
+            <h2>رسالة حب من أمين إلى مريم 💕</h2>
+            <p>يا حبيبتي، هادي الرسالة خاصة بيك، باش تعرفي كم كنحبك وكم أنتِ مهمة فحياتي. 💖</p>
+            <div class="darja">
+                يا مريم، حبيبتي الغالية، كنحبك بزاف بزاف، من أول نظرة ليك فالمدرسة، وكل يوم كنحبك أكثر وأكثر. أنتِ اللي مليتي قلبي ضو وفرحة، وما نقدرش نعيش بدونك. غادي نبقى معاك إلى الأبد، مهما كان اللي يحصل – سواء الفرحة كبيرة ولا الهموم كبارة، أنا هنا بجانبك، كنحميك ونشد عندك دائماً. أنتِ حياتي، يا قمري، وما غاديش نتخلى عليك أبداً، مهم كان اللي يجي. بحبك يا مريم، بحبك بكل اللي عندي، وغادي نبقى مع بعضنا للأبد. 💖<br><br>
+                أمين ديالك إلى الأبد. 💗
+            </div>
+            <p>هاد الرسالة هي وعدي ليك، يا مريم. أنتِ كل شيء بالنسبة لي. 💕</p>
+        </div>
+
+        <!-- قسم الصور: صور فردية - غير هذه الروابط بروابطك -->
+        <div class="photos">
+            <div class="photo">
+                <img src="https://i.imgur.com/amin_your_image.jpg" alt="صورة أمين">  <!-- غير هذا الرابط -->
+                <h3>أمين</h3>
+            </div>
+            <div class="photo">
+                <img src="https://i.imgur.com/maryam_your_image.jpg" alt="صورة مريم">  <!-- غير هذا الرابط -->
+                <h3>مريم</h3>
+            </div>
+        </div>
+
+        <!-- صورة مشتركة - غير هذا الرابط -->
+        <div class="together-photo">
+            <img src="https://i.imgur.com/together_your_image.jpg" alt="أمين ومريم معاً">  <!-- غير هذا الرابط -->
+            <h3>نحن معاً 💑</h3>
+        </div>
+    </div>
+</body>
+</html>
